@@ -165,7 +165,7 @@ void V_CalcRefdef(struct ref_params_s* pparams)
         return;
     }
 
-    if (!IsCvarExists(uw_auto) || uw_auto->value == 0 || !s_map_allowed) {
+    if (!IsCvarExists(uw_auto) || !(uw_auto->value > 0.0f) || !s_map_allowed) {
         Deactivate();
         return;
     }
